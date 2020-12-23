@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+svg {
+  position: absolute;
+  z-index: 1000;
+  transform-origin: 0px 0px 0px;
+  backface-visibility: hidden;
+  width: 1180px;
+  height: 773.8px;
+  transform: scale(1.4) scaleZ(1);
+  transition-timing-function: ease;
+  cursor: default;
+}
+
+path {
+  stroke-width: 3;
+}
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+
+.subway-container {
+    width: 100%;
+    height: 1000;
+    position: relative;
+    z-index: 0;
+    /* overflow: hidden; */
+    min-height: 1000px;
+    min-width: 100px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
+.indicatorText {
+  text-anchor: middle;
+  fill: white;
+  stroke: white;
+  stroke-width: 0.6;
+  font-size: 9px;
+  font-weight: normal;
+  line-height: 10px;
+}
+
+.station-group {
+  cursor: pointer;
+}
+.station-group > circle {
+  stroke-width: 1;
+  fill: white;
+  transition: r .3s
+}
+.station-group:hover > circle {
+  r: 4;
+  stroke-width: 2;
+}
+.station-group > text {
+  text-anchor: end;
+}
+.station-group > text > tspan {
+  font-size: 9px;
+}
+.station-group:hover > text {
+  font-weight: bolder;
+  font-size: 13px;
+}

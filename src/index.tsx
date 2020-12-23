@@ -10,6 +10,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Router, BrowserRouter } from 'react-router-dom';
 import createRoutes from './routes';
 import rootReducer from './module/reducer';
+import rootSaga from './module/rootSaga';
 
 // const customHistory = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware({
@@ -28,7 +29,7 @@ const store = createStore(
   )
 ); // 여러개의 미들웨어를 적용 할 수 있습니다.
 
-// sagaMiddleware.run()
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/common/Header";
-import Navigation from "./components/common/Navigation";
+import Header from "./components/Common/Header";
+import Navigation from "./components/Common/Navigation";
 // import logo from "./logo.svg";
 // import "./App.css";
 
