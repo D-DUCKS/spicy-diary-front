@@ -1,7 +1,7 @@
-import React from "react";
-import get from "lodash/get";
-import { Attributes, Station } from "src/models/subway";
-import { calculateCoordinates } from "src/utils/coordinateUtil";
+import React from 'react';
+import get from 'lodash/get';
+import { Station, Coordinates } from 'src/models/subway';
+import { calculateCoordinates } from 'src/utils/coordinateUtil';
 
 interface dictionary {
   [key: string]: any;
@@ -15,37 +15,37 @@ const LABEL_TEXT_POSITION: dictionary = {
   NW: { dx: -13, dy: -3 },
   SW: { dx: -10, dy: 11 },
   W: { dx: -18, dy: 3 },
-  NE: { dx: 15, dy: -3 },
+  NE: { dx: 15, dy: -3 }
 };
 
 interface Props {
-  attributes: Attributes;
+  color: string;
+  indicatorText: string;
   stations: Station[];
 }
 
-const Node: React.FC<Props> = ({ attributes, stations }) => {
-  const getFormmatedLabel = (coordination: any, station: any) => {
-    const labelPosition = get(station, "label_position", "S");
+const Node: React.FC<Props> = ({ color, indicatorText, stations }) => {
+  const getFormmatedLabel = (coordinates: Coordinates, station: Station) => {
+    const labelPosition = get(station, 'labelPosition', 'S');
     const labelTextPosition = LABEL_TEXT_POSITION[labelPosition];
-    // console.log(labelPosition, labelTextPosition);
-    if (!hasLineBreak(station.station_name)) {
+    if (!hasLineBreak(station.stationName!)) {
       return (
         <tspan
-          x={coordination.x}
+          x={coordinates.x}
           dx={labelTextPosition.dx}
           dy={labelTextPosition.dy}
         >
-          {station.station_name}
+          {station.stationName}
         </tspan>
       );
     } else {
-      const labelStrList = station.station_name.split("\n");
+      const labelStrList = station.stationName!.split('\n');
       const labels: any = [];
       let textPositionY = labelTextPosition.dy;
       labelStrList.map((str: string, index: number) => {
         labels.push(
           <tspan
-            x={coordination.x}
+            x={coordinates.x}
             dx={labelTextPosition.dx + 10}
             dy={labelTextPosition.dy + index * 6}
           >
@@ -59,34 +59,34 @@ const Node: React.FC<Props> = ({ attributes, stations }) => {
   };
 
   const hasLineBreak = (str: string) => {
-    return str.includes("\n");
+    return str.includes('\n');
   };
 
   return (
     <g className="marker-group">
       {stations &&
         stations.map((station: Station, index: number) => {
-          if (!station.node_type && !station.station_id) {
+          if (!station.nodeType && !station.stationId) {
             return;
           }
 
           const coordinates = calculateCoordinates(station.coordinates!);
-          if (station.node_type === "indicator") {
+          if (station.nodeType === 'INDICATOR') {
             return (
               <>
                 <rect
                   className="indicator"
                   x={coordinates.x - 5}
                   y={coordinates.y - 5}
-                  fill={attributes.data_color}
-                  stroke={attributes.data_color}
+                  fill={color}
+                  stroke={color}
                 ></rect>
                 <text
                   className="indicatorText"
                   x={coordinates.x}
                   y={coordinates.y + 3}
                 >
-                  {attributes.data_indicator_text}
+                  {indicatorText}
                 </text>
               </>
             );
@@ -98,14 +98,14 @@ const Node: React.FC<Props> = ({ attributes, stations }) => {
                 cx={coordinates.x}
                 cy={coordinates.y}
                 r={1.8}
-                stroke={attributes.data_color}
+                stroke={color}
               ></circle>
               <text
                 y={coordinates.y}
                 style={{
-                  textAnchor: hasLineBreak(station.station_name!)
-                    ? "end"
-                    : "middle",
+                  textAnchor: hasLineBreak(station.stationName!)
+                    ? 'end'
+                    : 'middle'
                 }}
               >
                 {getFormmatedLabel(coordinates, station)}

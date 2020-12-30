@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Common/Header";
 import Navigation from "./components/Common/Navigation";
 // import logo from "./logo.svg";
-// import "./App.css";
+import "./App.css";
 
 interface Props {
   router: any;

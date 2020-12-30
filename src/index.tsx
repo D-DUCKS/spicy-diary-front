@@ -9,7 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, BrowserRouter } from 'react-router-dom';
 import createRoutes from './routes';
-import rootReducer from './module/reducer';
+import rootReducer from './module/store';
 import rootSaga from './module/rootSaga';
 
 // const customHistory = createBrowserHistory();

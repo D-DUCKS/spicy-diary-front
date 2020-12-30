@@ -1,24 +1,26 @@
-import { type } from 'os';
 import types from './types';
+import { LineInfo } from 'src/models/subway';
 
-export function fetchStationsRequest(route: string) {
+export function fetchStationsRequest(lineNo: string) {
   return {
     type: types.FETCH_STATIONS_REQUEST,
-    route: route
-  }
+    lineNo: lineNo
+  };
 }
 
-export function fetchStationsSuccess({ attributes, stations }: any) {
+export function fetchStationsSuccess({ label, indicatorText, color, stations }: LineInfo) {
   return {
     type: types.FETCH_STATIONS_SUCCESS,
-    attributes,
+    label,
+    indicatorText,
+    color,
     stations
-  }
+  };
 }
 
 export function fetchStationsFailure(error: any) {
   return {
     type: types.FETCH_STATIONS_FAILURE,
     error
-  }
+  };
 }

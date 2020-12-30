@@ -3,7 +3,17 @@
   padding: 0px;
 }
 
-svg {
+.subway-container {
+    width: 100%;
+    height: 1000;
+    position: relative;
+    z-index: 0;
+    /* overflow: hidden; */
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.subway-container > svg {
   position: absolute;
   z-index: 1000;
   transform-origin: 0px 0px 0px;
@@ -15,22 +25,12 @@ svg {
   cursor: default;
 }
 
-path {
+.subway-container path {
   stroke-width: 3;
 }
 
 :not(svg) {
   transform-origin: 0px 0px;
-}
-
-.subway-container {
-    width: 100%;
-    height: 1000;
-    position: relative;
-    z-index: 0;
-    /* overflow: hidden; */
-    min-height: 1000px;
-    min-width: 100px;
 }
 
 .indicator {

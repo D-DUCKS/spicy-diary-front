@@ -1,7 +1,8 @@
-export function calculateCoordinates(coordinatesStr: string) {
-  const splitedCoordinates = coordinatesStr.split(",");
+import { Coordinates } from 'src/models/subway';
+
+export function calculateCoordinates(coordinates: Coordinates) {
   return {
-    x: parseFloat(splitedCoordinates[0]) * 5,
-    y: parseFloat(splitedCoordinates[1]) * 5,
+    x: coordinates.x * 5,
+    y: coordinates.y * 5,
   };
 };
