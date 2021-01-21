@@ -1,8 +1,8 @@
-import React from 'react';        
-import 'src/css/common.css';
+import React from 'react';
+import 'css/common.css';
 
-import Header from './components/Common/Header';
-import Navigation from './components/Common/Navigation';
+import Header from 'components/common/Header';
+import Navigation from 'components/common/Navigation';
 
 interface Props {
   router: any;

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import subwayTypes from 'src/module/subway/types';
-import { Station } from 'src/models/subway';
+import subwayTypes from 'module/subway/types';
+import { Station } from 'models/subway';
 
 interface IEntities {
   label: string | null;

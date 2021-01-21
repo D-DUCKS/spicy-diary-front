@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from 'src/images/logo.png';
-import Character from 'src/images/dducks_character.png';
-import Account from 'src/images/account.png';
+import Logo from 'images/logo.png';
+import Character from 'images/dducks_character.png';
+import Account from 'images/account.png';
 
 const Header: React.FC = () => {
   return (

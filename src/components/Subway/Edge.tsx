@@ -1,7 +1,7 @@
 import React from 'react';
 import get from 'lodash/get';
-import { Station } from 'src/models/subway';
-import { calculateCoordinates } from 'src/utils/coordinateUtil';
+import { Station } from 'models/subway';
+import { calculateCoordinates } from 'utils/coordinateUtil';
 
 interface Props {
   color: string;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import 'src/css/subway.css';
-import { fetchStationsRequest } from 'src/module/subway/actions';
-import Edge from 'src/components/Subway/Edge';
-import Node from 'src/components/Subway/Node';
+import 'css/subway.css';
+import { fetchStationsRequest } from 'module/subway/actions';
+import Edge from 'components/Subway/Edge';
+import Node from 'components/Subway/Node';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'src/module/store';
-import LineSelect from 'src/components/Subway/LineSelect';
+import { RootState } from 'module/store';
+import LineSelect from 'components/Subway/LineSelect';
 
 const SubwayPage: React.FC = () => {
   const [lineNo, setLineNo] = useState('1');

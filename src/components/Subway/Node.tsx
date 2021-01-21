@@ -1,7 +1,7 @@
 import React from 'react';
 import get from 'lodash/get';
-import { Station, Coordinates } from 'src/models/subway';
-import { calculateCoordinates } from 'src/utils/coordinateUtil';
+import { Station, Coordinates } from 'models/subway';
+import { calculateCoordinates } from 'utils/coordinateUtil';
 
 interface dictionary {
   [key: string]: any;

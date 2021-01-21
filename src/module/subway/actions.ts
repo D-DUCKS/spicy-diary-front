@@ -1,5 +1,5 @@
 import types from './types';
-import { LineInfo } from 'src/models/subway';
+import { LineInfo } from 'models/subway';
 
 export function fetchStationsRequest(lineNo: string) {
   return {

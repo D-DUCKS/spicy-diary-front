@@ -1,4 +1,4 @@
-import SubwayApi from 'src/api/SubwayApi';
+import SubwayApi from 'api/SubwayApi';
 import types from './types';
 import * as actions from './actions';
 import { all, call, fork, put, takeEvery, takeLatest } from 'redux-saga/effects';
