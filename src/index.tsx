@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import './css/index.css';
 import { createBrowserHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';

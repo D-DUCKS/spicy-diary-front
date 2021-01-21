@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url("../resources/font/Dosis/Dosis-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../resources/font/NotoSansKR/NotoSansKR-Light.otf") format("opentype");
+}
+
+* {
+    font-family: "Noto Sans";
+}

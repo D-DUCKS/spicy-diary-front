@@ -1,0 +1,44 @@
+body {
+    background: linear-gradient(217deg, rgba(230, 100, 101, 0.1), rgba(122, 23, 122, 0.1) 70.71%), url("../resources/imgs/Login_Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-layout {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    width: 74%;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.login-layout header, .login-layout main, .login-layout footer{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.login-header h1{
+    text-align: left;
+    font-family: Dosis;
+}
+
+.login-content {
+
+}
+
+.login-content_space {
+    width: 100%;
+}
+
+.login-content-input-wrapper {
+    width: 400px;
+}
+
+.login-content-input-wrapper input, .login-content-input-wrapper .ant-input-password {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-content-input-wrapper .ant-input-password input{
+    background-color: rgba(0, 0, 0, 0);
+}
