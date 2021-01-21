@@ -1,0 +1,33 @@
+/* Common */
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.content_wrap {
+  padding-left: 245px;
+  padding-right: 245px;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  width: 100%;
+  box-shadow: 0px 3px 3px #00000029;
+  padding: 14px 255px 14px 65px;
+}
+.header * {
+  display: inline;
+}
+.header .logo img {
+  height: 30px;
+}
+.header .character img {
+  height: 30px;
+  margin-left: 5px;
+}
+.header .account img {
+  width: 29px;
+  float: right;
+}

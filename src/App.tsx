@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'src/css/common.css';
+import Header from './components/Common/Header';
+import Navigation from './components/Common/Navigation';
+// import logo from "./logo.svg";
+// import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props {
+  router: any;
 }
+
+const App: React.FC<Props> = (props: Props) => {
+  return (
+    <>
+      <Header />
+      <div className="content_wrap">{props.router}</div>
+      <Navigation />
+    </>
+  );
+};
 
 export default App;
