@@ -25,7 +25,7 @@ const getLineDirection = (currentStation: any, targetStation: any) => {
   return lineDirection;
 };
 
-const Edge: React.FC<Props> = ({ color, stations }) => {
+const Edge: React.FC<Props> = ({ color, stations }: Props) => {
   if (color === null || stations === null) {
     return null;
   }
@@ -48,7 +48,7 @@ const Edge: React.FC<Props> = ({ color, stations }) => {
           if (!nextStation.coordinates) {
             return;
           }
-          let lineDirection = getLineDirection(station, nextStation);
+          const lineDirection = getLineDirection(station, nextStation);
           const coordinates = calculateCoordinates(
             get(station, 'moveTo', station.coordinates!)
           );

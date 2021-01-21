@@ -10,9 +10,9 @@ export default function createRoutes() {
     <>
       {/* <ScrollToTop /> */}
       <Switch>
-        <Route exact path="/subway" component={SubwayPage}/>
+        <Route exact path="/subway" component={SubwayPage} />
         {/* <Route exact path="/:encodedProfileId" component={ProfilePage} /> */}
-        {/* <Route path="*" component={ErrorPage} /> */} //TODO
+        {/* <Route path="*" component={ErrorPage} /> */}
       </Switch>
     </>
   );

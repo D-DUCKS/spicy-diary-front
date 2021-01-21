@@ -5,13 +5,14 @@ interface Props {
   onChange: (e: string) => void;
 }
 
-const LineSelect: React.FC<Props> = ({ onChange }) => {
+const LineSelect: React.FC<Props> = ({ onChange }: Props) => {
   const { Option } = Select;
 
   return (
     <Select
       showSearch
-      style={{ width: 200 }}
+      style={{ width: 200, cursor: 'pointer' }}
+      bordered={false}
       placeholder="호선을 선택하세요"
       optionFilterProp="children"
       onChange={onChange}

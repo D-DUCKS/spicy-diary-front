@@ -24,7 +24,7 @@ const store = createStore(
   // logger 를 사용하는 경우, logger가 가장 마지막에 와야합니다.
   applyMiddleware(
     // ReduxThunk.withExtraArgument({ history: customHistory }),
-    sagaMiddleware, // 사가 미들웨어를 적용하고
+    sagaMiddleware // 사가 미들웨어를 적용하고
     // logger
   )
 ); // 여러개의 미들웨어를 적용 할 수 있습니다.
@@ -32,9 +32,9 @@ const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-    <Provider store={store}>
-      <App router={<BrowserRouter>{createRoutes()}</BrowserRouter>} />
-    </Provider>,
+  <Provider store={store}>
+    <App router={<BrowserRouter>{createRoutes()}</BrowserRouter>} />
+  </Provider>,
   document.getElementById('root')
 );
 

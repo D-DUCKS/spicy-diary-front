@@ -1,38 +1,31 @@
-* {
-  margin: 0px;
-  padding: 0px;
+.subway_container {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  width: 100%;
+  /* position: relative;
+  z-index: 0; */
+  overflow: hidden;
+  /* min-height: 100px;
+  min-width: 100px; */
 }
-
-.subway-container {
-    width: 100%;
-    height: 1000;
-    position: relative;
-    z-index: 0;
-    /* overflow: hidden; */
-    min-height: 100px;
-    min-width: 100px;
+.subway_container hr {
+  border: 1px solid #EBE7E7;
 }
-
-.subway-container > svg {
-  position: absolute;
-  z-index: 1000;
-  transform-origin: 0px 0px 0px;
-  backface-visibility: hidden;
-  width: 1180px;
-  height: 773.8px;
+.subway_container > svg {
+  /* position: absolute; */
+  width: 1433px;
+  /* height: 773.8px; */
+  margin-top: 30px;
   transform: scale(1.4) scaleZ(1);
   transition-timing-function: ease;
   cursor: default;
 }
-
-.subway-container path {
+.subway_container path {
   stroke-width: 3;
 }
-
 :not(svg) {
   transform-origin: 0px 0px;
 }
-
 .indicator {
   width: 10px;
   height: 10px;
@@ -40,8 +33,7 @@
   stroke-linecap: round;
   stroke-width: 5;
 }
-
-.indicatorText {
+.indicator_text {
   text-anchor: middle;
   fill: white;
   stroke: white;
@@ -50,26 +42,25 @@
   font-weight: normal;
   line-height: 10px;
 }
-
-.station-group {
+.station_group {
   cursor: pointer;
 }
-.station-group > circle {
+.station_group > circle {
   stroke-width: 1;
   fill: white;
-  transition: r .3s
+  transition: r 0.3s;
 }
-.station-group:hover > circle {
+.station_group:hover > circle {
   r: 4;
   stroke-width: 2;
 }
-.station-group > text {
+.station_group > text {
   text-anchor: end;
 }
-.station-group > text > tspan {
+.station_group > text > tspan {
   font-size: 9px;
 }
-.station-group:hover > text {
+.station_group:hover > text {
   font-weight: bolder;
   font-size: 13px;
 }

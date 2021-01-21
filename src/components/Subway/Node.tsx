@@ -24,7 +24,7 @@ interface Props {
   stations: Station[];
 }
 
-const Node: React.FC<Props> = ({ color, indicatorText, stations }) => {
+const Node: React.FC<Props> = ({ color, indicatorText, stations }: Props) => {
   const getFormmatedLabel = (coordinates: Coordinates, station: Station) => {
     const labelPosition = get(station, 'labelPosition', 'S');
     const labelTextPosition = LABEL_TEXT_POSITION[labelPosition];
@@ -41,7 +41,7 @@ const Node: React.FC<Props> = ({ color, indicatorText, stations }) => {
     } else {
       const labelStrList = station.stationName!.split('\n');
       const labels: any = [];
-      let textPositionY = labelTextPosition.dy;
+      const textPositionY = labelTextPosition.dy;
       labelStrList.map((str: string, index: number) => {
         labels.push(
           <tspan
@@ -82,7 +82,7 @@ const Node: React.FC<Props> = ({ color, indicatorText, stations }) => {
                   stroke={color}
                 ></rect>
                 <text
-                  className="indicatorText"
+                  className="indicator_text"
                   x={coordinates.x}
                   y={coordinates.y + 3}
                 >
@@ -93,7 +93,7 @@ const Node: React.FC<Props> = ({ color, indicatorText, stations }) => {
           }
 
           return (
-            <g className="station-group">
+            <g className="station_group" key={index}>
               <circle
                 cx={coordinates.x}
                 cy={coordinates.y}

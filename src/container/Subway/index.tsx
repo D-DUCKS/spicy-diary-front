@@ -23,13 +23,14 @@ const SubwayPage: React.FC = () => {
   };
 
   return (
-    <div className="subway-container">
+    <div className="subway_container">
       <LineSelect onChange={handleLineOnChange} />
+      <hr />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         aria-hidden="true"
-        viewBox="0 0 1525 1000"
+        // viewBox="0 0 1525 1000"
         className="temp"
       >
         <Edge color={color} stations={stations} />

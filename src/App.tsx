@@ -1,18 +1,19 @@
-import React from "react";
-import Header from "./components/common/Header";
-import Navigation from "./components/common/Navigation";
+import React from 'react';
+import 'src/css/common.css';
+import Header from './components/Common/Header';
+import Navigation from './components/Common/Navigation';
 // import logo from "./logo.svg";
-import "./App.css";
+// import './App.css';
 
 interface Props {
   router: any;
 }
 
-const App: React.FC<Props> = (props) => {
+const App: React.FC<Props> = (props: Props) => {
   return (
     <>
       <Header />
-      {props.router}
+      <div className="content_wrap">{props.router}</div>
       <Navigation />
     </>
   );
