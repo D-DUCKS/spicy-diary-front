@@ -1,4 +1,4 @@
-import { Coordinates } from 'src/models/subway';
+import { Coordinates } from 'models/subway';
 
 export function calculateCoordinates(coordinates: Coordinates) {
   return {
